@@ -15,7 +15,7 @@ describe('Search', () => {
 		const searchText = 'Dog';
 		const spy = expect.createSpy();
 		const search = TestUtils.renderIntoDocument(<Search onSearch={spy}/>);
-		
+
 		search.refs.searchText.value = searchText;
 		TestUtils.Simulate.change(search.refs.searchText);
 
@@ -25,7 +25,7 @@ describe('Search', () => {
 	it('should call onSearch with proper checked value', () => {
 		const spy = expect.createSpy();
 		const search = TestUtils.renderIntoDocument(<Search onSearch={spy}/>);
-		
+
 		search.refs.showCompleted.checked = true;
 		TestUtils.Simulate.change(search.refs.showCompleted);
 
