@@ -1,6 +1,6 @@
 const React = require('react');
 
-const AddTodo = React.createClass({
+const Search = React.createClass({
 	render: function() {
 		return (
 			<div>
@@ -10,4 +10,4 @@ const AddTodo = React.createClass({
 	}
 });
 
-module.exports = AddTodo;
+module.exports = Search;
