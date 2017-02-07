@@ -3,7 +3,7 @@ const React = require('react');
 const uuid = require('node-uuid');
 
 import AddTodo from 'AddTodo';
-const Search = require('Search');
+import Search from 'Search';
 const TodoAPI = require('TodoAPI');
 import TodoList from 'TodoList';
 
@@ -39,9 +39,6 @@ const TodoApp = React.createClass({
 		});
 	},
 	render: function() {
-		//const {todos, showCompleted, searchText} = this.state;
-		// const filteredTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);
-
 		return (
 			<div>
 				<h1 className="page-title">Todo App</h1>
