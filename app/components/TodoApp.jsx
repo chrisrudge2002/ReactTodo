@@ -1,13 +1,11 @@
-const moment = require('moment');
-const React = require('react');
-const uuid = require('node-uuid');
+import React from 'react';
 
 import AddTodo from 'AddTodo';
 import Search from 'Search';
 import TodoList from 'TodoList';
 
-const TodoApp = React.createClass({
-	render: function() {
+export class TodoApp extends React.Component {
+	render() {
 		return (
 			<div>
 				<h1 className="page-title">Todo App</h1>
@@ -24,6 +22,6 @@ const TodoApp = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
 module.exports = TodoApp;
