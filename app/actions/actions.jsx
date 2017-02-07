@@ -5,6 +5,13 @@ export const addTodo = (text) => {
 	};
 };
 
+export const addTodos = (todos) => {
+	return {
+		type: 'ADD_TODOS',
+		todos
+	};
+};
+
 export const setSearchText = (searchText) => {
 	return {
 		type: 'SET_SEARCH_TEXT',
