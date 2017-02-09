@@ -1,7 +1,29 @@
-export const addTodo = (text) => {
+import firebase, {firebaseRef} from 'app/firebase/';
+import moment from 'moment';
+
+export const addTodo = (todo) => {
 	return {
 		type: 'ADD_TODO',
-		text
+		todo
+	};
+};
+
+export const startAddTodo = (text) => {
+	return (dispatch, getState) => {
+		const todo = {
+			text: text,
+			completed: false,
+			createdAt: moment().unix(),
+			completedAt: null
+		};
+		const todoRef = firebaseRef.child('todos').push(todo);
+
+		return todoRef.then(() => {
+			dispatch(addTodo({
+				...todo,
+				id: todoRef.key
+			}));
+		});
 	};
 };
 
