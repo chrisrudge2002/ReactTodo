@@ -57,6 +57,25 @@ describe('Actions', () => {
 		expect(res).toEqual(action);
 	});
 
+	it('should generate login action', () => {
+		const action = {
+			type: 'LOGIN',
+			uid: '11Y46nm9OQcYfw2Vf6BLt02fs9a2'
+		};
+		const res = actions.login(action.uid);
+
+		expect(res).toEqual(action);
+	});
+
+	it('should generate logout action', () => {
+		const action = {
+			type: 'LOGOUT'
+		};
+		const res = actions.logout();
+
+		expect(res).toEqual(action);
+	});
+
 	it('should generate search text action', () => {
 		const action = {
 			type: 'SET_SEARCH_TEXT',
